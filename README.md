@@ -36,3 +36,6 @@ This should create 8 files of the form `A_D_E_i.txt`.
 Lastly, run: 
 
 `cargo run --example opt-veritas`
+
+To create the editing proofs, you will have to install circom and run the trusted setup for groth16. The files
+`genCrop.py`, `bilinear.py`, and `genNoRound.py` can be used to generate input for the proofs.
