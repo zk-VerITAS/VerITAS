@@ -7,12 +7,14 @@ was developed by the developers of Gemini; we include it here only for completen
 Install the appropriate rust nightly version:
 
 `rustup install nightly-2023-06-13`
+
 `rustup default nightly-2023-06-13`
 
 
 To create an example hash proof for D pixels of max value 2^E using VerITAS, run:
 
 `python3 genpic.py orig D E`
+
 `python3 genpic.py edited D E`
 
 Then, in `veritas.rs`, edit line 45  to say `static D : usize = D;`, and edit line 46 to say, static 
