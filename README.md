@@ -1,8 +1,9 @@
 We rely on the KZG implementation from arkworks gemini (https://github.com/arkworks-rs/gemini). 
 There were some compilation issues with the available version of Gemini when we were developing VerITAS,
 so we implemented VerITAS from within the Gemini directory to get around compilation errors. VerITAS
-is implemented in the examples directory, and we use genpic.py to generate test photos. All other code
-was developed by the developers of Gemini; we include it here only for completeness.
+is implemented in the examples directory, and we use genpic.py to generate test photos. We also created
+src/absorbcircuit.rs to implement our Poseidon Groth16 hashing circuit. All other code was developed by 
+the developers of Gemini; we include it here only for completeness.
 
 Install the appropriate rust nightly version:
 
