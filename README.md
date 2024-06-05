@@ -23,27 +23,27 @@ Then, in `veritas.rs`, edit line 45  to say `static D : usize = D;`, and edit li
 
 Then, run:
 
-`cargo run --example veritas`
+`cargo run --release --example veritas`
 
 To create an example hash proof for D pixels of max value 2^E using opt-VerITAS, in `generate-a-row-coms.rs`, 
 edit line 48 to say `static D : usize = D;`, and edit line 49 to say, static `EXPONENT : u32 = E;`
 
 Then, run:
 
-`cargo run --example generate-a-row-coms`
+`cargo run --release --example generate-a-row-coms`
 
 This should create 8 files of the form `A_D_E_i.txt`.
 
 Lastly, run: 
 
-`cargo run --example opt-veritas`
+`cargo run --release --example opt-veritas`
 
 To create the editing proofs, you can run:
 
-`cargo run --example blur`
+`cargo run --release --example blur`
 
-`cargo run --example resize-full`
+`cargo run --release --example resize-full`
 
-`cargo run --example crop-full`
+`cargo run --release --example crop-full`
 
-`cargo run --example gray`
+`cargo run --release --example gray`
