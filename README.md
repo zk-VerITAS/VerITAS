@@ -38,5 +38,12 @@ Lastly, run:
 
 `cargo run --example opt-veritas`
 
-To create the editing proofs, you will have to install circom and run the trusted setup for groth16. The files
-`genCrop.py`, `bilinear.py`, and `genNoRound.py` can be used to generate input for the proofs.
+To create the editing proofs, you can run:
+
+`cargo run --example blur`
+
+`cargo run --example resize-full`
+
+`cargo run --example crop-full`
+
+`cargo run --example gray`
