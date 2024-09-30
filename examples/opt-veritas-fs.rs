@@ -645,7 +645,7 @@ fn get_A_openings(domain: GeneralEvaluationDomain::<Fr>, time_ck: &CommitterKey:
 
         let mut commitments = Vec::new();
 
-        let mut filename = "A_256_".to_owned();
+        let mut filename = "A_".to_owned();
         filename.push_str(&D.to_string());
         filename.push_str("_");
         filename.push_str(&EXPONENT.to_string());
