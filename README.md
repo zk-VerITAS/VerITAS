@@ -1,17 +1,3 @@
-We rely on the KZG implementation from arkworks gemini (https://github.com/arkworks-rs/gemini). 
-There were some compilation issues with the available version of Gemini when we were developing VerITAS,
-so we implemented VerITAS from within the Gemini directory to get around compilation errors. VerITAS
-is implemented in the examples directory, and we use genpic.py to generate test photos. We also created
-src/absorbcircuit.rs to implement our Poseidon Groth16 hashing circuit. All other code was developed by 
-the developers of Gemini; we include it here only for completeness.
-
-Install the appropriate rust nightly version:
-
-`rustup install nightly-2023-06-13`
-
-`rustup default nightly-2023-06-13`
-
-
 To create an example hash proof for D pixels of max value 2^E using VerITAS, run:
 
 `python3 genpic.py orig D E`
@@ -23,10 +9,10 @@ Then, in `veritas.rs`, edit line 45  to say `static D : usize = D;`, and edit li
 
 Then, run:
 
-`cargo run --release --example veritas-fs`
+`cargo run --release --example veritas`
 
 To create an example hash proof for D pixels of max value 2^E using opt-VerITAS, in `generate-a-row-coms.rs`, 
-edit line 48 to say `static D : usize = D;`, and edit line 49 to say, static `EXPONENT : u32 = E;`
+edit line ?? to say `static D : usize = D;`, and edit line 49 to say, static `EXPONENT : u32 = E;`
 
 Then, run:
 
@@ -36,14 +22,14 @@ This should create 8 files of the form `A_D_E_i.txt`.
 
 Lastly, run: 
 
-`cargo run --release --example opt-veritas-fs`
+`cargo run --release --example opt-veritas`
 
-To create the editing proofs, you can run:
+To create the editing proofs, you can run (and change the parameters within the corresponding files):
 
 `cargo run --release --example blur`
 
-`cargo run --release --example resize-full`
+`cargo run --release --example resize`
 
-`cargo run --release --example crop-full`
+`cargo run --release --example crop`
 
 `cargo run --release --example gray`
